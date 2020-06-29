@@ -16,8 +16,8 @@ const App = () => {
   return (
     <>
       <Suspense fallback={<div className="loading loading-lg"></div>}>
-        <Router>
-          <Switch>
+        <Switch>
+          <Router>
             <Route exact path="/">
               <Home />
             </Route>
@@ -36,8 +36,8 @@ const App = () => {
             <Route exact path="*">
               <NoMatch />
             </Route>
-          </Switch>
-        </Router>
+          </Router>
+        </Switch>
       </Suspense>
     </>
   );
