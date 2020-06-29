@@ -1,1 +1,0 @@
-{"version":3,"sources":["page/NoMatch/index.jsx"],"names":["index"],"mappings":";;;;;;;AAAA;;;;AAEe,SAASA,KAAT,GAAiB;AAC9B,sBAAO,gDAAP;AACD","file":"NoMatch.9a0e29e4.js","sourceRoot":"..","sourcesContent":["import React from 'react';\n\nexport default function index() {\n  return <div>404</div>;\n}\n"]}
