@@ -15,9 +15,9 @@ const ConcurrentRestrictor = lazy(() => import('./page/ConcurrentRestrictor'));
 const App = () => {
   return (
     <>
-      <Suspense fallback={<div className="loading loading-lg"></div>}>
-        <Switch>
-          <Router>
+      <Router>
+        <Suspense fallback={<div className="loading loading-lg"></div>}>
+          <Switch>
             <Route exact path="/">
               <Home />
             </Route>
@@ -36,9 +36,9 @@ const App = () => {
             <Route exact path="*">
               <NoMatch />
             </Route>
-          </Router>
-        </Switch>
-      </Suspense>
+          </Switch>
+        </Suspense>
+      </Router>
     </>
   );
 };
