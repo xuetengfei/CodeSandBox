@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const List = [
   {
@@ -31,7 +32,7 @@ export default function index() {
             <div className="card">
               <div className="card-header">
                 <div className="card-title h5">
-                  <a href={path}>{title}</a>
+                  <Link to={`/${path}`}>{title}</Link>
                 </div>
               </div>
             </div>

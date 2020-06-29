@@ -1,7 +1,6 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-// import CompChildren from './comp-children.jsx';
 import 'regenerator-runtime/runtime';
 import 'intersection-observer';
 import 'spectre.css';
@@ -13,12 +12,11 @@ const KeepAlive = lazy(() => import('./page/KeepAlive/index.jsx'));
 const LazyLoadImage = lazy(() => import('./page/LazyLoadImage/index.tsx'));
 const ConcurrentRestrictor = lazy(() => import('./page/ConcurrentRestrictor'));
 
-// page/LazyLoadImage/index.tsx
 const App = () => {
   return (
     <>
-      <Router>
-        <Suspense fallback={<div className="loading loading-lg"></div>}>
+      <Suspense fallback={<div className="loading loading-lg"></div>}>
+        <Router>
           <Switch>
             <Route exact path="/">
               <Home />
@@ -39,8 +37,8 @@ const App = () => {
               <NoMatch />
             </Route>
           </Switch>
-        </Suspense>
-      </Router>
+        </Router>
+      </Suspense>
     </>
   );
 };

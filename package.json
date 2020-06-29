@@ -5,6 +5,7 @@
     "git-push": "./git-push-workflow.sh"
   },
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "eslint": "^7.3.0",
     "intersection-observer": "^0.10.0",
     "less": "^3.11.3",
