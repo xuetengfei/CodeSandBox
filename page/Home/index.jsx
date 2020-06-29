@@ -28,7 +28,13 @@ export default function index() {
     <>
       <Router>
         <ul className="nav">
-          {List.map(({ title, path }, id) => (
+          <li>
+            <Link to="/lazyload">Lazyload Components</Link>
+          </li>
+          <li>
+            <Link to="/keepalive">keepalive</Link>
+          </li>
+          {/* {List.map(({ title, path }, id) => (
             <li className="nav-item" key={id}>
               <div className="card">
                 <div className="card-header">
@@ -38,7 +44,7 @@ export default function index() {
                 </div>
               </div>
             </li>
-          ))}
+          ))} */}
         </ul>
       </Router>
     </>
