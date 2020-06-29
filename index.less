@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 10px;
+  * {
+    font-size: 20px;
+  }
+}
+
+li {
+  // list-style: upper-roman;
+}
+
+#waterfall {
+  width: 100vw;
+  background-color: rgb(205, 205, 205);
+  display: grid; /* 1 */
+  grid-auto-rows: 50px; /* 2 */
+  grid-gap: 10px; /* 3 */
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+}
+
+.container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 10px;
+  row-gap: 15px;
+}

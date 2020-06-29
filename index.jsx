@@ -1,0 +1,48 @@
+import React, { lazy, Suspense, useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+// import CompChildren from './comp-children.jsx';
+import 'regenerator-runtime/runtime';
+import 'intersection-observer';
+import 'spectre.css';
+
+const Home = lazy(() => import('./page/Home/index.jsx'));
+const LAZYLOAD = lazy(() => import('./page/lazyLoad/index.jsx'));
+const NoMatch = lazy(() => import('./page/NoMatch/index.jsx'));
+const KeepAlive = lazy(() => import('./page/KeepAlive/index.jsx'));
+const LazyLoadImage = lazy(() => import('./page/LazyLoadImage/index.tsx'));
+const ConcurrentRestrictor = lazy(() => import('./page/ConcurrentRestrictor'));
+
+// page/LazyLoadImage/index.tsx
+const App = () => {
+  return (
+    <>
+      <Router>
+        <Suspense fallback={<div className="loading loading-lg"></div>}>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/lazyload">
+              <LAZYLOAD />
+            </Route>
+            <Route exact path="/keepalive">
+              <KeepAlive />
+            </Route>
+            <Route exact path="/LazyLoadImage">
+              <LazyLoadImage />
+            </Route>
+            <Route exact path="/concurrentrestrictor">
+              <ConcurrentRestrictor />
+            </Route>
+            <Route exact path="*">
+              <NoMatch />
+            </Route>
+          </Switch>
+        </Suspense>
+      </Router>
+    </>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));

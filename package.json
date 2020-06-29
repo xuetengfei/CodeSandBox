@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "git-push": "./git-push-workflow.sh"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "intersection-observer": "^0.10.0",
+    "less": "^3.11.3",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "p-limit": "^3.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "spectre.css": "^0.5.8"
+  }
+}
