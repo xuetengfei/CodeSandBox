@@ -16,28 +16,26 @@ const App = () => {
   return (
     <>
       <Router>
-        <Suspense fallback={<div className="loading loading-lg"></div>}>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/lazyload">
-              <LAZYLOAD />
-            </Route>
-            <Route exact path="/keepalive">
-              <KeepAlive />
-            </Route>
-            <Route exact path="/LazyLoadImage">
-              <LazyLoadImage />
-            </Route>
-            <Route exact path="/concurrentrestrictor">
-              <ConcurrentRestrictor />
-            </Route>
-            <Route exact path="*">
-              <NoMatch />
-            </Route>
-          </Switch>
-        </Suspense>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/lazyload">
+            <LAZYLOAD />
+          </Route>
+          <Route exact path="/keepalive">
+            <KeepAlive />
+          </Route>
+          <Route exact path="/LazyLoadImage">
+            <LazyLoadImage />
+          </Route>
+          <Route exact path="/concurrentrestrictor">
+            <ConcurrentRestrictor />
+          </Route>
+          <Route exact path="*">
+            <NoMatch />
+          </Route>
+        </Switch>
       </Router>
     </>
   );
