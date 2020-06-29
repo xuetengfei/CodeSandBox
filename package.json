@@ -12,6 +12,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
+    "@loadable/component": "^5.12.0",
     "node-fetch": "^2.6.0",
     "p-limit": "^3.0.1",
     "react": "^16.13.1",

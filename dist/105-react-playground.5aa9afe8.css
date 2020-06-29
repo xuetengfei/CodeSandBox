@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 10px;
+}
+body * {
+  font-size: 20px;
+}
+.container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+
+/*# sourceMappingURL=/105-react-playground.5aa9afe8.css.map */

@@ -1,52 +1,41 @@
 import React from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const List = [
   {
     title: 'Lazyload Components',
-    path: 'lazyload',
+    path: '/lazyload',
   },
   {
     title: 'keepalive',
-    path: 'keepalive',
+    path: '/keepalive',
   },
   {
     title: 'LazyLoadImage',
-    path: 'LazyLoadImage',
+    path: '/lazyLoadImage',
   },
   {
     title: 'concurrentrestrictor',
-    path: 'concurrentrestrictor',
-  },
-  {
-    title: 'xxx',
-    path: 'xxx',
+    path: '/concurrentrestrictor',
   },
 ];
 export default function index() {
+  let history = useHistory();
   return (
     <>
-      <Router>
-        <ul className="nav">
-          <li>
-            <Link to="/lazyload">Lazyload Components</Link>
-          </li>
-          <li>
-            <Link to="/keepalive">keepalive</Link>
-          </li>
-          {/* {List.map(({ title, path }, id) => (
-            <li className="nav-item" key={id}>
-              <div className="card">
-                <div className="card-header">
-                  <div className="card-title h5">
-                    <Link to={`/${path}`}>{title}</Link>
-                  </div>
+      <ul className="nav">
+        {List.map(({ title, path }, id) => (
+          <li className="nav-item" key={id}>
+            <div className="card">
+              <div className="card-header">
+                <div className="card-title h5">
+                  <span onClick={() => history.push(path)}>{title}</span>
                 </div>
               </div>
-            </li>
-          ))} */}
-        </ul>
-      </Router>
+            </div>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
