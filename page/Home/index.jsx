@@ -11,12 +11,16 @@ const List = [
     path: '/keepalive',
   },
   {
-    title: 'LazyLoadImage',
+    title: 'LazyLoad Image',
     path: '/lazyLoadImage',
   },
   {
-    title: 'concurrentrestrictor',
+    title: 'Concurrent Restrictor',
     path: '/concurrentrestrictor',
+  },
+  {
+    title: 'Dynamically Load Reducers',
+    path: '/dynamically-load-reducers',
   },
 ];
 export default function index() {
