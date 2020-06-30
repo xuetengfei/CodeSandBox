@@ -18,7 +18,7 @@ export default function LazyImage(props) {
           src={src || loadingPlaceholder}
           data-src={url}
           alt={alt || 'a image'}
-          className="img-border"
+          className="img-with-border"
         />
       </div>
     </>

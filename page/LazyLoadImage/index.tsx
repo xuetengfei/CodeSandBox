@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import LazyImage from './components/lazyImage';
 import './style.less';
 
-const list = Array.from(Array(10)).map((_, i) => `https://picsum.photos/200/300?random=${i}`);
+const list = Array.from(Array(10)).map((_, i) => `https://picsum.photos/300/300?random=${i}`);
 
 export default function index() {
   useEffect(() => {
