@@ -1,4 +1,4 @@
 {
   "name": "code-sand-box",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [{ "source": "/dynamically-load-reducers", "destination": "/index.html" }]
 }
