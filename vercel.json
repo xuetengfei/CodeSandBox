@@ -1,4 +1,3 @@
 {
-  "name": "code-sand-box",
-  "rewrites": [{ "source": "/dynamically-load-reducers", "destination": "/index.html" }]
+  "name": "code-sand-box"
 }
