@@ -1,0 +1,4 @@
+{
+  "name": "code-sand-box",
+  "redirects": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
