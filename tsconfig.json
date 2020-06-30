@@ -1,5 +1,5 @@
 {
   "compilerOptions": { "esModuleInterop": true, "jsx": "react", "target": "es2015" },
-  "include": ["page/**/*"],
+  "include": ["page/**/*", "gloabl.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
