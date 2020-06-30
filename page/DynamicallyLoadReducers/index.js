@@ -39,16 +39,9 @@ function index(props) {
     <>
       <h2>Dynamically Load Reducers</h2>
       <div className="toast toast-success">
-        Webpack provides import() syntax, that conforms to the ECMAScript proposal for dynamic
-        imports. Let’s try to split our code based on different entry points of your routes. This
-        makes perfect sense, user that goes to mywebsite/foo do not need code that is written only
-        for mywebsite/bar!
+        How to dynamically load reducers for code splitting in a Redux application?
       </div>
-      <div className="toast toast-success">
-        By now, you should realise, reducer that is written only for mywebsite/bar, shouldn’t be
-        imported or included when you are visiting mywebsite/foo! Then how do I dynamically load
-        reducers for code splitting in a Redux application?
-      </div>
+
       <div className="divider"></div>
       <div>
         <h6>全局原来存在的</h6>
