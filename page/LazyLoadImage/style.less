@@ -1,15 +1,40 @@
 .lineStyle {
   width: 100vw;
   margin: 0 -10px;
-  height: 0px;
-  background-color: #000;
   position: fixed;
   bottom: 400px;
   border-bottom: dashed 1px currentColor;
+  text-align: left;
+  font-size: 10px;
 }
 
-.img-with-border {
-  border: 1px solid #000;
-  width: auto;
-  max-width: 800px;
+.lazy-load-image-warpper {
+  margin-bottom: 1000px;
+  text-align: center;
 }
+
+.lazy-load-image-warpper img {
+  border: 1px solid #000;
+}
+
+.lazy-load-image-warpper img.picture-shadow {
+  box-shadow: 0px 0px 72px -17px rgba(0, 0, 0, 0.45);
+  border: none;
+  border-radius: none;
+}
+
+// #svgSpin {
+//   animation-name: spin;
+//   animation-duration: 2000ms;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+// }
+
+// @keyframes spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
