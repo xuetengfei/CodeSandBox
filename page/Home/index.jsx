@@ -8,7 +8,7 @@ export default function index() {
     <>
       <ul className="nav">
         {routerList
-          .filter(v => v.path !== '/')
+          .filter(v => v.title)
           .map(({ title, path }, id) => (
             <li className="nav-item" key={id}>
               <div className="card">

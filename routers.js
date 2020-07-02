@@ -11,6 +11,10 @@ export default [
     component: lazy(() => import('./page/Home/index')),
   },
   {
+    path: '/Login',
+    component: lazy(() => import('./page/Login')),
+  },
+  {
     path: '/lazyload',
     title: 'Lazyload Components',
     component: lazy(() => import('./page/lazyLoad/index.jsx')),
@@ -30,9 +34,11 @@ export default [
     title: 'Dynamically Load Reducers',
     component: lazy(() => import('./page/DynamicallyLoadReducers')),
   },
+
   {
     path: '/navigation-guard',
     title: 'Navigation Guard',
+    needAuth: true,
     component: lazy(() => import('./page/NavigationGuard')),
   },
 ];
