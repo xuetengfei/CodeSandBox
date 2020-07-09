@@ -41,4 +41,14 @@ export default [
     needAuth: true,
     component: lazy(() => import('./page/NavigationGuard')),
   },
+  {
+    path: '/setState-Callback',
+    title: 'setState Callback',
+    component: lazy(() => import('./page/SetStateCallback')),
+  },
+  {
+    path: '/react-batch-updates',
+    title: 'react-batch-updates',
+    component: lazy(() => import('./page/react-batch-updates')),
+  },
 ];
