@@ -1,0 +1,98 @@
+.bar {
+  height: 20px;
+  width: 300px;
+  background-color: #f5f5f5;
+  margin: 5px 0 10px;
+}
+.bar::before {
+  counter-reset: progress var(--percent);
+  content: counter(progress) '%\2002';
+  display: block;
+  width: calc(300px * var(--percent) / 100);
+  font-size: 12px;
+  color: #fff;
+  background-color: #2486ff;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.xtf {
+  height: 300px;
+  width: 100%;
+  border: 1px solid #888;
+}
+.xtf:active::after {
+  transform: translate(-50%, -100%);
+  opacity: 0.5;
+  transition: 0s;
+  left: -999px;
+}
+.xtf::after {
+  content: 'xuetengfei';
+  position: fixed;
+  z-index: 999;
+  left: calc(var(--clientx, -999) * 1px);
+  top: calc(var(--clienty, -999) * 1px);
+  transform: translate(-50%, calc(-100% - 20px));
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.5s;
+}
+
+.tabs {
+  position: relative;
+  display: flex;
+  max-width: 414px;
+  justify-content: space-between;
+  border-bottom: 1px solid #717678;
+  background-color: #fff;
+  margin: 30px auto;
+}
+.tabs::before,
+.tabs::after {
+  width: calc(var(--target-width, 0) * 1px);
+  position: absolute;
+  left: calc(var(--target-left, -299) * 1px);
+  color: #2a80eb;
+}
+.tabs[style]::before,
+.tabs[style]::after {
+  content: '';
+}
+
+.tabs::before {
+  background-color: currentColor;
+  height: calc(var(--target-height) * 1px);
+  mix-blend-mode: overlay;
+}
+.tabs::after {
+  border-bottom: solid;
+  bottom: -2px;
+  transition: left 0.2s, width 0.2s;
+}
+
+.tabs-item {
+  color: #717678;
+  padding: 10px 0;
+  text-decoration: none;
+  outline: none;
+  &:link {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: currentColor;
+    text-decoration: none;
+  }
+}

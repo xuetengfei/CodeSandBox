@@ -51,4 +51,9 @@ export default [
     title: 'react-batch-updates',
     component: lazy(() => import('./page/react-batch-updates')),
   },
+  {
+    path: '/ui',
+    title: 'UI && Styles',
+    component: lazy(() => import('./page/StylesCompontents/index.tsx')),
+  },
 ];
