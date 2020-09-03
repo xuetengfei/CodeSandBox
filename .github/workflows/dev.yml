@@ -21,13 +21,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Auto Git
-        run: |
-        date +"%Y-%m-%d %H:%M:%S.%N" > log.txt
-        git pull --rebase
-        git commit -am "a commit"
-        git push
-
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       # Runs a single command using the runners shell
