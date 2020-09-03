@@ -23,6 +23,7 @@ jobs:
     steps:
       - name: Auto Git
         run: date +"%Y-%m-%d %H:%M:%S.%N" > log.txt
+        git pull --rebase
         git commit -am "a commit"
         git push
 
