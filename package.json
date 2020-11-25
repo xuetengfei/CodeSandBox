@@ -12,7 +12,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "p-limit": "^3.0.1",
     "parcel": "^1.12.4",
     "react": "^16.8.3",
