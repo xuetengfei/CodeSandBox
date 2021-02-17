@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import store from './store/index';
 import routerList from './routers';
 import NoMatch from './page/NoMatch/index.jsx';
@@ -14,6 +15,17 @@ function checkAuth() {
   console.log('checkAuth auth: ', auth);
   return auth;
 }
+
+const client = new ApolloClient({
+  uri: 'https://71z1g.sse.codesandbox.io/',
+  cache: new InMemoryCache(),
+});
+
+// const client = new ApolloClient({
+//   // [Get started > Coinbase client - CodeSandbox](https://codesandbox.io/s/get-started-coinbase-client-73r10?file=/src/index.js)
+//   uri: 'https://48p1r2roz4.sse.codesandbox.io',
+//   cache: new InMemoryCache(),
+// });
 
 const App = () => {
   return (
@@ -65,7 +77,9 @@ const App = () => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </Provider>,
   document.getElementById('root'),
 );

@@ -1,10 +1,5 @@
 import { lazy } from 'react';
 
-// {
-//   title: 'keepalive',
-//   path: '/keepalive',
-// },
-
 export default [
   {
     path: '/',
@@ -55,5 +50,10 @@ export default [
     path: '/ui',
     title: 'UI && Styles',
     component: lazy(() => import('./page/StylesCompontents/index.tsx')),
+  },
+  {
+    path: '/graphql',
+    title: 'Graphql',
+    component: lazy(() => import('./page/Graphql/index')),
   },
 ];
