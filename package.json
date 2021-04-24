@@ -1,8 +1,7 @@
 {
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html",
-    "git-push": "./git-push-workflow.sh"
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
