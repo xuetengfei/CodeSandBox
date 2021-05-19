@@ -35,7 +35,7 @@ export default function index() {
   function run() {
     setCount(0);
     setRet(null);
-    asyncPool(3, ayncList, fetchData).then(ret => {
+    asyncPool(10, ayncList, fetchData).then(ret => {
       console.log('ret: ', ret);
       setRet(ret.map(v => ({ args: v.args })));
     });
