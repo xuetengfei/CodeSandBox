@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // 9个请求
 const api = 'https://httpbin.org/get?id=';
-const ayncList = Array.from(Array(9)).map((_, i) => `${api}${i + 1}`);
+const ayncList = Array.from(Array(100)).map((_, i) => `${api}${i + 1}`);
 
 function fetchData(api) {
   return fetch(api)
@@ -35,7 +35,7 @@ export default function index() {
   function run() {
     setCount(0);
     setRet(null);
-    asyncPool(10, ayncList, fetchData).then(ret => {
+    asyncPool(20, ayncList, fetchData).then(ret => {
       console.log('ret: ', ret);
       setRet(ret.map(v => ({ args: v.args })));
     });
