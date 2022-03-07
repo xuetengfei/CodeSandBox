@@ -44,7 +44,11 @@ export default function index() {
       {list.map((url, idx) => (
         <LazyImage key={idx} url={url}></LazyImage>
       ))}
-      <div className="lineStyle">超过这条线，图片就会加载</div>
+      <div className="lineStyle">超过这条线，图片就会加载
+      <p>
+      rootMargin: '0px 0px -400px 0px'
+      </p>
+      </div>
     </>
   );
 }
