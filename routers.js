@@ -56,4 +56,9 @@ export default [
     title: 'Graphql',
     component: lazy(() => import('./page/Graphql/index')),
   },
+  {
+    path: '/css',
+    title: 'css',
+    component: lazy(() => import('./page/css-demo')),
+  },
 ];
