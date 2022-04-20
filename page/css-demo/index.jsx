@@ -15,6 +15,18 @@ export default function comModuleA() {
         maxime expedita iure cum consequuntur reprehenderit repellat blanditiis inventore facilis
         minima? Doloribus facilis soluta dolores mollitia atque adipisci.
       </p>
+      <section>
+        <details>
+          <summary>View Frequently asked questions</summary>
+          <ul>
+            <li>Question 1</li>
+            <li>Question 2</li>
+            <li>Question 3</li>
+            <li>Question 4</li>
+            <li>Question 5</li>
+          </ul>
+        </details>
+      </section>
     </>
   );
 }
