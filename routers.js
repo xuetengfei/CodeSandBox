@@ -10,6 +10,11 @@ export default [
     component: lazy(() => import('./page/Login')),
   },
   {
+    path: '/exposure',
+    title: 'exposure',
+    component: lazy(() => import('./page/exposure')),
+  },
+  {
     path: '/lazyload',
     title: 'Lazyload Components',
     component: lazy(() => import('./page/lazyLoad/index.jsx')),
