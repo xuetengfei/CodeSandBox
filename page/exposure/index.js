@@ -3,20 +3,20 @@ import exposure from './children/exposure';
 import Children from './children/index';
 
 export default function index() {
-  function f1() {
-    const elements1 = document.querySelectorAll('[data-v]');
-    Array.from(elements1).forEach(v => {
+  function exposureStart() {
+    const doms = document.querySelectorAll('[data-v]');
+    Array.from(doms).forEach(v => {
       exposure.add({ el: v });
     });
   }
 
   useEffect(() => {
-    f1();
+    exposureStart();
   }, []);
 
   return (
     <div>
-      <h1 data-v="title">exposure</h1>
+      <h1 data-v="exposure-title">exposure</h1>
       <Children />
     </div>
   );
