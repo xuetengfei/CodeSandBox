@@ -29,7 +29,7 @@ const client = new ApolloClient({
 
 const App = () => {
   return (
-    <Suspense fallback={<div className="loading loading-lg"></div>}>
+    <Suspense fallback={<div className="loading loading-lg" />}>
       <Router>
         <Switch>
           {routerList

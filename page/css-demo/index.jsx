@@ -17,7 +17,9 @@ export default function comModuleA() {
       </p>
       <section>
         <details>
-          <summary>View Frequently asked questions</summary>
+          <summary>
+            <h1>more</h1>
+          </summary>
           <ul>
             <li>Question 1</li>
             <li>Question 2</li>
@@ -26,6 +28,36 @@ export default function comModuleA() {
             <li>Question 5</li>
           </ul>
         </details>
+      </section>
+      <section>
+        <section>
+          <h1>Latest Transactions</h1>
+          <h2>Today</h2>
+          <details>
+            <summary>
+              <h3>
+                <strong>American Eagle</strong>
+              </h3>
+              <span>-39.99 USD</span>
+            </summary>
+            <div>
+              <dl>
+                <div>
+                  <dt>Time</dt>
+                  <dd>4.27pm</dd>
+                </div>
+                <div>
+                  <dt>Card used</dt>
+                  <dd>•••• 6890</dd>
+                </div>
+                <div>
+                  <dt>Reference ID</dt>
+                  <dd>3125-568911</dd>
+                </div>
+              </dl>
+            </div>
+          </details>
+        </section>
       </section>
     </>
   );
