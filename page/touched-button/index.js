@@ -74,7 +74,9 @@ export default function TouchedButton() {
         'https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js',
       );
     };
-    document.getElementsByTagName('body')[0].appendChild(el);
+    // const x = document.getElementsByTagName('body')[0];
+    // console.log('x', x);
+    //  .appendChild(el);
   }
 
   return (
