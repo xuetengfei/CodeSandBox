@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
+import { showPerformance as showPanel } from './performanceBookmarklet.min.js';
 import './index.less';
 // import interact from 'interactjs';
 
 export default function TouchedButton() {
   useEffect(() => {
-    touch();
+    // touch();
   }, []);
 
   function touch() {
@@ -59,31 +60,12 @@ export default function TouchedButton() {
       this.style.top = t + 'px'; //确定DIV的上边位置
     });
   }
-  function showPanel() {
-    // let performanceBookmarkletURL =
-    // 'https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js';
-    let el = document.createElement('script');
-    el.type = 'text/javascript';
-    el.text = require('./performanceBookmarklet.min.js');
-    // el.src = performanceBookmarkletURL;
-    el.onerror = function () {
-      console.log(
-        'Looks like the Content Security Policy directive is blocking the use of bookmarklets\n\nYou can copy and paste the content of:\n\n"https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js"\n\ninto your console instead\n\n(link is in console already)',
-      );
-      console.log(
-        'https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js',
-      );
-    };
-    // const x = document.getElementsByTagName('body')[0];
-    // console.log('x', x);
-    //  .appendChild(el);
-  }
 
   return (
     <div className="parent">
-      <h1>touched-button</h1>
+      <h1>performance</h1>
       <button id="grid-snap" className="btn btn-primary" onClick={showPanel}>
-        button2
+        performance
       </button>
     </div>
   );
