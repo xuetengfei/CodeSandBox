@@ -10,6 +10,11 @@ export default [
     component: lazy(() => import('./page/Login')),
   },
   {
+    path: '/touched-button',
+    title: 'touched-button',
+    component: lazy(() => import('./page/touched-button')),
+  },
+  {
     path: '/performance',
     title: 'performance',
     component: lazy(() => import('./page/window-performance')),
