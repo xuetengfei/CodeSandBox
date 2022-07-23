@@ -29,7 +29,6 @@ export default function TouchedButton() {
       //移动时 当前位置与起始位置之间的差值
       starXEnd = e.touches[0].clientX - starX;
       starYEnd = e.touches[0].clientY - starY;
-
       if (L < 0) {
         //限制拖拽的X范围，不能拖出屏幕
         L = 0;
@@ -54,7 +53,7 @@ export default function TouchedButton() {
       if (flag === 0) {
         //点击
         showPanel();
-        // alert('click');
+        console.log('flag', flag);
       }
     });
   }
@@ -71,6 +70,11 @@ export default function TouchedButton() {
           right: '20px',
           border: '1px solid #eee',
           borderRadius: '50%',
+          backgroundColor: '#fff',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          boxShadow: '0 0 4px 4px rgba(0, 0, 0,.2)',
         }}
       >
         button
