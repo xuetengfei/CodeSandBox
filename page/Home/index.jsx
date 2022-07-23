@@ -11,10 +11,10 @@ export default function index() {
           .filter(v => v.title)
           .map(({ title, path }, id) => (
             <li className="nav-item" key={id}>
-              <div className="card">
+              <div className="card" onClick={() => history.push(path)}>
                 <div className="card-header">
                   <div className="card-title h5">
-                    <span onClick={() => history.push(path)}>{title}</span>
+                    <span>{title}</span>
                   </div>
                 </div>
               </div>

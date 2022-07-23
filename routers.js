@@ -10,9 +10,9 @@ export default [
     component: lazy(() => import('./page/Login')),
   },
   {
-    path: '/touched-button',
-    title: 'touched-button',
-    component: lazy(() => import('./page/touched-button')),
+    path: '/performance-suspend-button',
+    title: 'performance-suspend-button',
+    component: lazy(() => import('./page/performance-suspend-button')),
   },
   {
     path: '/performance',
