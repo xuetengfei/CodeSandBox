@@ -44,7 +44,6 @@ export default [
     title: 'Dynamically Load Reducers',
     component: lazy(() => import('./page/DynamicallyLoadReducers')),
   },
-
   {
     path: '/navigation-guard',
     title: 'Navigation Guard',
@@ -75,5 +74,10 @@ export default [
     path: '/css',
     title: 'css',
     component: lazy(() => import('./page/css-demo')),
+  },
+  {
+    path: '/css/loading-animation',
+    title: 'loading-animation',
+    component: lazy(() => import('./page/css-demo/loading-animation')),
   },
 ];

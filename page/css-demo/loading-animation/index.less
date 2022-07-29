@@ -1,0 +1,45 @@
+.mixin() {
+  @height: 10px;
+  @wrapperPadding: 2px;
+  @width: 300px;
+}
+#call-mixin {
+  .mixin();
+}
+.f {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 200px;
+}
+.main {
+  .mixin();
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  width: @width;
+  border: 1px solid rgb(108, 108, 108);
+  height: @height;
+  border-radius: 10px;
+  padding: @wrapperPadding;
+}
+.box {
+  .mixin();
+  border-radius: 10px;
+  width: @width;
+  height: calc(@height - 2 * @wrapperPadding);
+  background-color: rgb(73, 156, 0);
+  animation: anima;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+@keyframes anima {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
