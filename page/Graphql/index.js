@@ -84,10 +84,12 @@ function App() {
 
   return (
     <div>
-      <h2>Building Query components with @apollo/client</h2>
-      <a href="https://www.apollographql.com/docs/react/">
-        Introduction to Apollo Client - Apollo GraphQL Docs
-      </a>
+      <div>
+        <h2>Building Query components with @apollo/client</h2>
+        <a href="https://www.apollographql.com/docs/react/">
+          Introduction to Apollo Client - Apollo GraphQL Docs
+        </a>
+      </div>
       <Dogs onDogSelected={onDogSelected} />
       {selectedDog && <DogPhoto breed={selectedDog} />}
       {/* <DogPhotoQueryManually /> */}
