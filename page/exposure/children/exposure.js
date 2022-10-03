@@ -1,3 +1,6 @@
+// [Intersection Observer API - Web API 接口参考 | MDN](
+// https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API
+
 // 节流的时间，默认是100ms
 IntersectionObserver.prototype.THROTTLE_TIMEOUT = 300;
 
@@ -39,7 +42,6 @@ class Exposure {
               self.dot();
             } else {
               //  否则，直接缓存
-              //   self.storeIntoLocalstorage(self.dotDataArr);
               if (self.dotDataArr.length > 0) {
                 // 不断有新的ctm进来，接下来如果没增加，自动n秒后打点
                 self._timer = setTimeout(() => {
@@ -71,9 +73,6 @@ class Exposure {
     console.log('dotDataArr', dotDataArr);
   }
   // 缓存数据
-  storeIntoLocalstorage(dotDataArr) {
-    localStorage.setItem('dotDataArr', JSON.stringify(dotDataArr));
-  }
   // 上传数据
   dotFromLocalStorage() {
     const ctmsStr = JSON.parse(localStorage.getItem('dotDataArr'));
