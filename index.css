@@ -5,7 +5,7 @@ body {
 body * {
   font-size: 20px;
 }
-.container1 {
+.container {
   width: 100vw;
   display: grid;
   grid-template-columns: auto auto auto;

@@ -21,12 +21,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// const client = new ApolloClient({
-//   // [Get started > Coinbase client - CodeSandbox](https://codesandbox.io/s/get-started-coinbase-client-73r10?file=/src/index.js)
-//   uri: 'https://48p1r2roz4.sse.codesandbox.io',
-//   cache: new InMemoryCache(),
-// });
-
 const App = () => {
   return (
     <Suspense fallback={<div className="loading loading-lg" />}>
