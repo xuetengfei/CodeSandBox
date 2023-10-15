@@ -1,26 +1,27 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import routerList from '../../routers';
+import './style.less';
 
 export default function index() {
   let history = useHistory();
   return (
     <>
-      <ul className="nav">
-        {routerList
-          .filter(v => v.title)
-          .map(({ title, path }, id) => (
-            <li className="nav-item" key={id}>
-              <div className="card" onClick={() => history.push(path)}>
-                <div className="card-header">
-                  <div className="card-title h5">
-                    <span>{title}</span>
-                  </div>
-                </div>
+      <div className="container ">
+        <div class="columns">
+          {routerList
+            .filter(v => v.title)
+            .map(({ title, path }, id) => (
+              <div
+                key={id}
+                class=" borderStyle column col-xm-4 col-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 p0"
+                onClick={() => history.push(path)}
+              >
+                {id + 1}: {title}
               </div>
-            </li>
-          ))}
-      </ul>
+            ))}
+        </div>
+      </div>
     </>
   );
 }
