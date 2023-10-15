@@ -1,11 +1,10 @@
 body {
   margin: 0;
   padding: 0px;
-  * {
-    font-size: 20px;
-  }
 }
-
+body * {
+  font-size: 20px;
+}
 .container1 {
   width: 100vw;
   display: grid;
@@ -14,11 +13,6 @@ body {
   column-gap: 10px;
   row-gap: 15px;
 }
-
-#root {
-  // padding: 10px;
-}
-
 button {
   margin-right: 6px !important;
 }
