@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import routerList from '../../routers';
+import 'spectre.css';
 import './style.less';
 
 export default function index() {
@@ -8,13 +9,13 @@ export default function index() {
   return (
     <>
       <div className="container ">
-        <div class="columns">
+        <div className="columns">
           {routerList
             .filter(v => v.title)
             .map(({ title, path }, id) => (
               <div
                 key={id}
-                class=" borderStyle column col-xm-4 col-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 p0"
+                className=" borderStyle column col-xm-4 col-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 p0"
                 onClick={() => history.push(path)}
               >
                 {id + 1}: {title}
