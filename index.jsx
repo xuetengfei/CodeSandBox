@@ -8,7 +8,7 @@ import routerList from './routers';
 import NoMatch from './page/NoMatch/index.jsx';
 import 'regenerator-runtime/runtime';
 import 'intersection-observer';
-import 'spectre.css';
+// import 'spectre.css';
 
 function checkAuth() {
   const auth = localStorage.getItem('isLogin');
